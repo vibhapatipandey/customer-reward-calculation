@@ -41,7 +41,7 @@ public class RewardPointServiceImpl implements RewardPointService {
 		});	
 		return rewardPoins;
 	}
-	
+	// Holding some static test data. We can implement this by using DB.
 	private void createTestDate() {
 		List<CustomerTransation> customerList= Arrays.asList(
 				new CustomerTransation("Customer1",120.0,LocalDate.of(2023, 9, 15)),

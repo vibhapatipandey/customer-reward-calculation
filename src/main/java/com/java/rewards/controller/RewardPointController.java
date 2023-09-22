@@ -29,7 +29,7 @@ public class RewardPointController {
 		
 	 
 	
-	
+	//method added for create data.
 	@PostMapping("/addDetail")
 	public ResponseEntity<String> createData(@RequestBody List<CustomerTransation> customerList){
 		customerList =Optional.ofNullable(customerList).orElseThrow(()-> new RuntimeException("CustomerTransation should not be null."));
@@ -39,6 +39,8 @@ public class RewardPointController {
 	}
 	
 	
+	
+	// Retrieve data 
 	@GetMapping("/reward-points")
 	public ResponseEntity<Map<String,Map<Month,Integer>>> getRewardPoint(){
 		var rewardPoints = rewardPointService.fetchRewardPoints();
